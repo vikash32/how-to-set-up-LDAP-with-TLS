@@ -97,7 +97,7 @@ ldappasswd -s vikash32# -W -D "cn=Manager,dc=example,dc=com" -x "uid=vikash,ou=E
 `ldapsearch -x cn=vikash -b dc=example,dc=com`
 
 ### Till now our LDAP is not listening secure connection. 
-#### To configure to use TLS , create a pem certificate, Please note: at the time of giving CN name, always provide complete domain name of ldap server ex: ldap.example.com
+#### To configure to use TLS , create a pem certificate, Please note: at the time of giving CN name, always provide complete domain name of ldap server ex: ldapserver1.example.com
 ```
 cd /etc/openldap/
 openssl req -new -x509 -nodes -out /etc/openldap/example.pem -keyout /etc/openldap/example.key -days 365
